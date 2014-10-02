@@ -2,12 +2,9 @@
 
 require_once 'DB.php';
 
-abstract class Crud extends DB{
-
+abstract class Crud extends DB implements ICrud
+{
 	protected $table;
-
-	abstract public function insert();
-	abstract public function update($id);
 
 	public function find($id){
 		$sql  = "SELECT * FROM $this->table WHERE id = :id";
