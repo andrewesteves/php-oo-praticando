@@ -38,7 +38,6 @@ class Usuarios extends Crud{
 		$stmt->bindParam(':email', $this->email);
 		$stmt->bindParam(':id', $id);
 		return $stmt->execute();
-
 	}
 
 }
